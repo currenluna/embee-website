@@ -17,18 +17,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const tl_load = gsap
         .timeline({ paused: false })
         .from(".page_main",
-            { y: 32, opacity: 0, duration: 0.5, delay: 0.2, ease: "power3.ut"})
+            { y: 32, opacity: 0, duration: 0.3, delay: 0.3, ease: "power3.ut"})
         .from(".nav_wrap",
-            { scale: 0.9, opacity: 0, duration: 0.7, ease: "power3.out" }, "<");
+            { scale: 0.9, opacity: 0, duration: 0.3, ease: "power3.out" }, "<");
 
     const tl_nav = gsap
         .timeline({ paused: true })
         .fromTo(nav_layout,
             { height: "64px" },
-            { height: "auto", duration: 0.5, ease: "power3.inOut"})
+            { height: "auto", duration: 0.3, ease: "power3.inOut"})
         .fromTo(nav_open_icon,
             { rotation: 0 },
-            { rotation: -45, duration: 0.5, ease: "power3.inOut"}, "<");
+            { rotation: -45, duration: 0.3, ease: "power3.inOut"}, "<");
 
     tl_load.play();
     console.log("here");
