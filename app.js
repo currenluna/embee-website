@@ -12,7 +12,7 @@ let nav_open = false;
 document.addEventListener("DOMContentLoaded", (event) => {
     const nav_open_wrap = document.querySelector(".nav_open_wrap");
     const nav_open_icon = document.querySelector(".nav_open_icon");
-    const nav_layout = document.querySelector(".nav_layout");
+    const nav_wrap = document.querySelector(".nav_wrap");
 
     const tl_load = gsap
         .timeline({ paused: false })
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     const tl_nav = gsap
         .timeline({ paused: true })
-        .fromTo(nav_layout,
+        .fromTo(nav_wrap,
             { height: "64px" },
             { height: "auto", duration: 0.3, ease: "power3.inOut"})
         .fromTo(nav_open_icon,
