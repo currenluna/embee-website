@@ -3,16 +3,13 @@
 window.Webflow ||= [];
 window.Webflow.push(() => {
     //alert("hello world hi");
-    //console.log("log");
+    console.log("working");
 });
-
-let nav_open = false;
 
 // use a script tag or an external JS file
 document.addEventListener("DOMContentLoaded", (event) => {
-    const nav_open_icon = document.querySelector(".nav_open_icon");
-    const nav_logo_wrap = document.querySelector(".nav_logo_wrap");
-    const nav_wrap = document.querySelector(".nav_wrap");
+    
+    const h1 = document.querySelector(".hero_primary_heading");
 
     const tl_load = gsap
         .timeline({ paused: false })
@@ -33,8 +30,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     tl_load.play();
     console.log("here");
 
-    nav_wrap.addEventListener("click", (event) => {
-        event.stopPropagation();
+    nav_open_wrap.addEventListener("click", () => {
         if (!nav_open) {
             tl_nav.play();
             nav_open = true;
@@ -44,11 +40,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     });
 
-    nav_logo_wrap.addEventListener("click", (event) => {
-        event.stopPropagation();
-    })
-
     window.addEventListener("resize", () => {
         tl_nav.invalidate();
     });
 });
+
+// (function(global) {
+//     global.pageFunctions = global.pageFunctions
+//     || {
+//         executed: {},
+//         functions: {},
+//         addFunction: function(id,fn) {
+//             if (!this.functions[id]) this.functions[id]=fn;
+//         }, executeFunctions: function() {
+//             if (this.added) return;
+//             this.added=true;
+//             for (const id in this.functions) {
+//                 if (!this.executed[id]) {
+//                     try {
+//                         this.functions[id]();
+//                         this.executed[id]=true
+//                     } catch(e) {
+//                         console.error(`Error executing function ${id}:`,e)
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// })(window);
