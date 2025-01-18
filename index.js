@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         rotation: 135, // Rotate from 0 to 135 degrees
         ease: "none", // Linear rotation based on scroll
         scrollTrigger: {
-          trigger: ".footer_symbol", // The element triggering the animation
-          start: "top bottom", // Start when the element's top reaches the bottom of the viewport
-          end: "top 70%", // End when the element's top reaches 90% of the viewport
-          scrub: true, // Sync animation progress with scroll
-          markers: true // Optional: Add markers for debugging
+            trigger: ".footer_symbol", // The element triggering the animation
+            start: "top bottom", // Start when the element's top reaches the bottom of the viewport
+            end: "top 70%", // End when the element's top reaches 90% of the viewport
+            scrub: true, // Sync animation progress with scroll
+        //  markers: true // Optional: Add markers for debugging
         }
     });
 
