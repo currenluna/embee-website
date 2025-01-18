@@ -3,11 +3,8 @@ window.Webflow.push(() => {
     //alert("hello world hi");
 });
 
-
 // use a script tag or an external JS file
 document.addEventListener("DOMContentLoaded", (event) => {
-
-
     $(".slider_wrap").each(function (index) {
         let loopMode = false;
         if ($(this).attr("loop-mode") === "true") {
