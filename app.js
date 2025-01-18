@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const nav_logo_wrap = document.querySelector(".nav_logo_wrap");
     const nav_wrap = document.querySelector(".nav_wrap");
 	const duration_animation_home = 0.7;
-  	const duration_overlap_home = 0.5;
+  	const duration_overlap_home = 0.57;
       console.log("hello");
   
   	// Home page load animation
@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
           const tl_load = gsap
           .timeline({ paused: false })
           .from(".nav_wrap",
-              { scale: 0.9, opacity: 0, duration: 0.7, ease: "power3.out" })
+              { scale: 0.95, opacity: 0, duration: 0.7, ease: "power3.out" })
           .from(".hero_primary_heading",
               { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
           .from(".hero_primary_visual",
-              { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
+              { scale: 0.95, y: 32, opacity: 0, duration: 0.8, ease: "power3.out" }, `-=${duration_overlap_home}`)
           .from(".services_preview_wrap",
               { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
           .from(".projects_preview_wrap",
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           .from(".cta_wrap",
               { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
           .from(".footer_wrap",
-              { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`);
+              { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `=${duration_overlap_home}`);
     } else { // Default page load animation
         console.log("default");
     	const tl_load = gsap
@@ -45,11 +45,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             { scale: 0.9, opacity: 0, duration: 0.3, ease: "power3.out" }, "<");
         tl_load.play();
     	console.log("here");
-    	
-        
-        
-        
-        
     }
 
     const tl_nav = gsap
