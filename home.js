@@ -11,38 +11,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     
     const h1 = document.querySelector(".hero_primary_heading");
 
-    const tl_load = gsap
+    const tl_text = gsap
         .timeline({ paused: false })
-        .from(".page_main",
+        .from(h1,
             { y: 32, opacity: 0, duration: 0.3, delay: 0.3, ease: "power3.ut"})
-        .from(".nav_wrap",
-            { scale: 0.9, opacity: 0, duration: 0.3, ease: "power3.out" }, "<");
-
-    const tl_nav = gsap
-        .timeline({ paused: true })
-        .fromTo(nav_wrap,
-            { height: "64px" },
-            { height: "auto", duration: 0.3, ease: "power3.inOut"})
-        .fromTo(nav_open_icon,
-            { rotation: 0 },
-            { rotation: -45, duration: 0.3, ease: "power3.inOut"}, "<");
-
-    tl_load.play();
-    console.log("here");
-
-    nav_open_wrap.addEventListener("click", () => {
-        if (!nav_open) {
-            tl_nav.play();
-            nav_open = true;
-        } else {
-            tl_nav.reverse();
-            nav_open = false;
-        }
-    });
-
-    window.addEventListener("resize", () => {
-        tl_nav.invalidate();
-    });
 });
 
 // (function(global) {
