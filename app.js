@@ -26,15 +26,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
           .from(".hero_primary_heading",
               { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
           .from(".hero_primary_visual",
-              { scale: 0.95, y: 32, opacity: 0, duration: 0.8, ease: "power3.out" }, `-=${duration_overlap_home}`)
+              { scale: 0.95, y: 16, opacity: 0, duration: 0.8, ease: "power3.out" }, `-=${duration_overlap_home}`)
           .from(".services_preview_wrap",
-              { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
+              { y: 16, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
           .from(".projects_preview_wrap",
-              { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
+              { y: 16, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
           .from(".cta_wrap",
-              { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
+              { y: 16, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `-=${duration_overlap_home}`)
           .from(".footer_wrap",
-              { y: 32, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `=${duration_overlap_home}`);
+              { y: 16, opacity: 0, duration: duration_animation_home, ease: "power3.out" }, `=${duration_overlap_home}`);
     } else { // Default page load animation
         console.log("default");
     	const tl_load = gsap
